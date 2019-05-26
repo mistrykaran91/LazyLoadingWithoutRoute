@@ -27,7 +27,10 @@ import { WardModule } from "./ward/ward.module";
 import { LazyLoadService } from "./lazy-load.service";
 import { provideRoutes } from "@angular/router";
 import { DialogOpenerComponent } from "./dialog-opener.component";
-import { FormsModule } from "@angular/forms";
+import { FormsModule, ReactiveFormsModule } from "@angular/forms";
+import { RecommendInstrumentsComponent } from './recommend-instruments/recommend-instruments.component';
+import { RecommendInstrumentComponent } from './recommend-instrument/recommend-instrument.component';
+import { FocusListComponent } from './focus-list/focus-list.component';
 
 @NgModule({
   declarations: [
@@ -39,7 +42,10 @@ import { FormsModule } from "@angular/forms";
     SidenavListComponent,
     HeaderComponent,
     AuthComponent,
-    DialogOpenerComponent
+    DialogOpenerComponent,
+    RecommendInstrumentsComponent,
+    RecommendInstrumentComponent,
+    FocusListComponent
   ],
   imports: [
     BrowserModule,
@@ -47,6 +53,7 @@ import { FormsModule } from "@angular/forms";
     MaterialModule,
     CommonModule,
     FormsModule,
+    ReactiveFormsModule,
     AppRoutingModule,
     FlexLayoutModule
   ],
@@ -66,4 +73,4 @@ import { FormsModule } from "@angular/forms";
   ],
   bootstrap: [AppComponent]
 })
-export class AppModule {}
+export class AppModule { }

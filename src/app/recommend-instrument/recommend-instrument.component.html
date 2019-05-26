@@ -1,0 +1,13 @@
+<div [formGroup]="recommendation">
+
+  <div *ngIf="!isFromFocusList">
+    <mat-form-field>
+      <input type="text" matInput placeholder="Instrument" formControlName="name">
+    </mat-form-field>
+  </div>
+
+  <mat-form-field>
+    <input type="text" matInput placeholder="Display Name" formControlName="displayName">
+  </mat-form-field>
+
+</div>

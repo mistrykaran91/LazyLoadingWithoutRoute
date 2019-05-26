@@ -1,0 +1,16 @@
+<div [formGroup]="focusListForm">
+
+  <ng-container formArrayName="list">
+
+    <ng-container *ngFor="let list of focusListForm?.get('list')?.controls; let parentIndex= index;" [formGroupName]="parentIndex">
+
+      <ng-container formArrayName="recommendations">
+
+        <app-recommend-instrument *ngFor="let recommendation of list?.get('recommendations')?.controls; let i = index;"
+          [formGroupName]="i" [recommendation]="recommendation" [isFromFocusList]="true">
+        </app-recommend-instrument>
+      </ng-container>
+
+    </ng-container>
+    
+  </ng-container>

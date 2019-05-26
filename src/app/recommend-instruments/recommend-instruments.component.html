@@ -1,0 +1,20 @@
+<div [formGroup]="mainForm">
+
+  <ng-container formArrayName="recommendations">
+
+    <app-recommend-instrument *ngFor="let recommendation of mainForm?.get('recommendations')?.controls; let i = index;"
+      [recommendation]="recommendation" [isFromFocusList]="false">
+    </app-recommend-instrument>
+
+  </ng-container>
+
+
+  <app-focus-list [focusListForm]="focusListForm">
+
+  </app-focus-list>
+
+  <button mat-button (click)="onClick()">Action</button>
+
+  MainForm : {{ mainForm?.get('recommendations')?.controls?.length }}
+
+</div>
